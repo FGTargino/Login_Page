@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="light-theme">
+    <div class="theme-toggle">
+        <button id="toggle-theme">Switch Theme</button>
+    </div>
+    <div id="content">
+        <div class="form-container" id="login-container">
+            <form id="login-form">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <label for="username">Username (8-18 characters)</label>
+                    <div class="input-with-icon">
+                        <input type="text" id="username" name="username" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password (8-18 characters)</label>
+                    <div class="input-with-icon">
+                        <input type="password" id="password" name="password" required>
+                        <i class="fas fa-eye" id="toggle-password"></i>
+                    </div>
+                </div>
+                <button type="submit">Login</button>
+                <p id="login-error-message" class="error-message"></p>
+                <div class="form-links">
+                    <button type="button" id="toggle-form">Switch to Signup</button>
+                </div>
+            </form>
+        </div>
+        <div class="form-container" id="signup-container" style="display: none;">
+            <form id="signup-form">
+                <h2>Signup</h2>
+                <div class="input-group">
+                    <label for="new-username">New Username (8-18 characters)</label>
+                    <div class="input-with-icon">
+                        <input type="text" id="new-username" name="new-username" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="new-password">New Password (8-18 characters)</label>
+                    <div class="input-with-icon">
+                        <input type="password" id="new-password" name="new-password" required>
+                        <i class="fas fa-eye" id="toggle-new-password"></i>
+                    </div>
+                </div>
+                <button type="submit">Signup</button>
+                <p id="signup-error-message" class="error-message"></p>
+                <div class="form-links">
+                    <button type="button" id="toggle-login">Switch to Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="loading-icon" class="loading-icon" style="display: none;">
+        <i class="fas fa-spinner fa-spin"></i>
+    </div>
+    <div id="success-message" class="success-message" style="display: none;">
+        <p>Signup successful!</p>
+        <button id="ok-button">OK</button>
+    </div>
+    <div id="login-success-message" class="success-message" style="display: none;">
+        <p>Login successful!</p>
+        <button id="login-ok-button">OK</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

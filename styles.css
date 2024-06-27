@@ -1,0 +1,309 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-size: 400% 400%;
+    animation: gradientAnimationLight 10s ease infinite;
+    width: 100%;
+}
+
+@keyframes gradientAnimationLight {
+    0%, 100% { background-color: #d0e6f6; }
+    20% { background-color: #c1f0d5; }
+    40% { background-color: #f6e1c2; }
+    60% { background-color: #e8d1f5; }
+    80% { background-color: #e5c5f1; }
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 5%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+
+.theme-toggle button {
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ff7043;
+    color: white;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle button:hover {
+    background-color: #f4511e;
+    transform: scale(1.1);
+}
+
+h2 {
+    margin-bottom: 5%;
+    color: #ff7043;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.input-group {
+    margin-bottom: 5%;
+    text-align: left;
+    width: 100%;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 2%;
+    color: #ff7043;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.input-with-icon {
+    position: relative;
+    width: 100%;
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding: 1em;
+    padding-right: 2.5em;
+    border: 2px solid #ff7043;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    background-color: #fff8e1;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-with-icon i {
+    position: absolute;
+    top: 50%;
+    right: 1.5em;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ff7043;
+}
+
+.input-with-icon input:focus {
+    border-color: #ff8a65;
+    background-color: #fff8e1;
+}
+
+button {
+    background: #ff8a65;
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.2em;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-bottom: 5%;
+}
+
+button:hover {
+    background: #ff7043;
+    transform: scale(1.05);
+}
+
+/* Estilo ajustado para a mensagem de erro */
+.error-message {
+    color: #ff0000;
+    margin-top: 1%;
+    display: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    background-color: #fff8e1;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    padding: 0.5%;
+}
+
+/* Ajuste para as telinhas de login e signup ficarem mais largas */
+.form-container .login-form,
+.form-container .signup-form {
+    width: 100%;
+    max-width: 600px; /* Aumentado para mais largura */
+}
+
+body.light-theme {
+    animation: gradientAnimationLight 10s infinite;
+}
+
+body.light-theme .form-container {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #ff7043;
+}
+
+body.light-theme h2, 
+body.light-theme .input-group label {
+    color: #ff7043;
+}
+
+body.light-theme input {
+    border: 2px solid #ff7043;
+    background-color: #fff8e1;
+}
+
+body.light-theme input:focus {
+    border-color: #ff8a65;
+    background-color: #fff8e1;
+}
+
+body.light-theme button {
+    background: #ff8a65;
+}
+
+body.light-theme button:hover {
+    background: #ff7043;
+}
+
+body.light-theme .theme-toggle button {
+    background-color: #ff8a65;
+}
+
+body.light-theme .theme-toggle button:hover {
+    background-color: #ff7043;
+}
+
+body.dark-theme {
+    animation: gradientAnimationDark 10s infinite;
+}
+
+@keyframes gradientAnimationDark {
+    0%, 100% { background-color: #000000; }
+    20% { background-color: #100016; }
+    40% { background-color: #000f16; }
+    60% { background-color: #040012; }
+    80% { background-color: #141500; }
+}
+
+body.dark-theme .form-container {
+    background: rgba(24, 24, 24, 0.9);
+    border: 2px solid #ff7043;
+}
+
+body.dark-theme h2, 
+body.dark-theme .input-group label {
+    color: #ff7043;
+}
+
+body.dark-theme input {
+    border: 2px solid #ff7043;
+    background-color: #181818;
+    color: #ffffff;
+}
+
+body.dark-theme input:focus {
+    border-color: #ff8a65;
+    background-color: #181818;
+}
+
+body.dark-theme button {
+    background: #ff8a65;
+}
+
+body.dark-theme button:hover {
+    background: #ff7043;
+}
+
+body.dark-theme .theme-toggle button {
+    background-color: #ff8a65;
+}
+
+body.dark-theme .theme-toggle button:hover {
+    background-color: #ff7043;
+}
+
+.loading-icon, .success-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff8e1;
+    border: 2px solid #ff7043;
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+
+.success-message p {
+    font-size: 1.2em;
+    color: #ff7043;
+}
+
+.success-message button {
+    background: #ff8a65;
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 5%;
+}
+
+.success-message button:hover {
+    background: #ff7043;
+}
+
+/* Responsividade */
+.form-container.login-form,
+.form-container.signup-form {
+    max-width: 900px; /* Ajuste o valor conforme necessário */
+    width: 100%; /* Ajuste para largura responsiva */
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 10%; /* Ajuste para melhor responsividade */
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15%; /* Ajuste para melhor responsividade */ 
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 360px) {
+    .form-container {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 320px) {
+    .form-container {
+        max-width: 90%;
+    }
+}
